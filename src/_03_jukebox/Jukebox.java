@@ -12,7 +12,10 @@ import java.net.URL;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 import javazoom.jl.player.advanced.AdvancedPlayer;
@@ -20,15 +23,28 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
 /*   If you don't have javazoom.jar in your project, you can download it from here: http://bit.ly/javazoom
  *   Right click your project and add it as a JAR (Under Java Build Path > Libraries).*/
 
-public class Jukebox implements Runnable {
+public class Jukebox implements Runnable  {
 
     public void run() {
+JFrame frame = new JFrame();
+JPanel panel = new JPanel();
+JButton button = new JButton();
+JButton button2 = new JButton();
+frame.add(panel);
+panel.add(button);
+panel.add(button2);
+frame.setVisible(true);
+
+
 
 		// 1. Find an mp3 on your computer or on the Internet.
 		// 2. Create a Song object for that mp3
+    	Song song = new Song("hi.mp3");
+    	Song song2 = new Song("bye.mp3");
 
 		// 3. Play the Song
-
+song.play();
+song2.play();
 		/*
 		 * 4. Create a user interface for your Jukebox so that the user can to
 		 * choose which song to play. You can use can use a different button for
