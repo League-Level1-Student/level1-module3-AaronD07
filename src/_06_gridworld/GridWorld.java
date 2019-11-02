@@ -12,8 +12,11 @@ public  class GridWorld {
 		world.show();
 		Bug bug = new Bug();
 		Random random = new Random(200);
-		Location location = new Location(random, random);
 		
+		Location location = new Location(random, random);
+		bug.setDirection(90);
+		
+		bug.setColor(BLUE);
 	}
 	
 
